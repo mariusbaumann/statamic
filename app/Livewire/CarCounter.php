@@ -23,7 +23,7 @@ class CarCounter extends Component
     public static function calculateRatio($carCountElectric, $carCountGas)
     {
         if ($carCountGas > 0) {
-            return round($carCountElectric / $carCountGas * 100, 0);
+            return round( 100 / ($carCountElectric + $carCountGas) * $carCountElectric , 2);
         }
         return 0; // Avoid division by zero
     }
